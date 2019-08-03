@@ -5,20 +5,23 @@ class ProjectSummary extends Component {
     const projectContainer = (
       <Fragment>
         <div className="project-table">
-          <div className="project-name">Project 1</div>
+          <span className="is-table-title">Project 1</span>
           <div className="project-week-container">
-            <div>Week 1 16 Hours </div>
-            <div>Week 2 16 Hours </div>
-            <div>Week 3 16 Hours </div>
-            <div>Week 4 16 Hours </div>
+            <span className="is-table-week">Week 1 16 Hours </span>
+            <span className="is-table-week">Week 1 16 Hours </span>
+            <span className="is-table-week">Week 1 16 Hours </span>
           </div>
         </div>
       </Fragment>
     );
     return (
       <div className="project-container">
-        <span> Project Summary</span>
+        <span className="is-module-title"> Project Summary</span>
         <div className="project-list-container">
+          {projectContainer}
+          {projectContainer}
+          {projectContainer}
+          {projectContainer}
           {projectContainer}
           {projectContainer}
           {projectContainer}
