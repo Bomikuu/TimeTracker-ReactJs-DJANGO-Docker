@@ -41,7 +41,7 @@ class Timestamp extends Component {
           </Button>
         ]}
       >
-        <div>Employee ID(Numbers Only)</div>
+        <div>Employee Name</div>
         <Input
           ref={c => (this.input1 = c)}
           className="input"
