@@ -1,35 +1,35 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins");
 
 * {
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
   margin: 0 auto;
   padding: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 /*** Dashboard CSS ***/
 .dashboard-container {
   width: 100vw;
   height: 100vh;
-  border: 1px solid red;
+
   display: grid;
   grid-template-rows: 1fr 10fr;
 }
 
 .child-container {
-  border: 1px solid black;
 }
 
 .body-child {
-  border: 1px solid blue;
+  margin: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .dashboard-body {
   display: grid;
-  grid-template-columns: 70% 30%;
+  grid-template-columns: 60% 40%;
   grid-template-rows: 40% 60%;
 }
 
@@ -40,15 +40,28 @@ body {
 
 /**** Header CSS ****/
 .dashboard-header {
-  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.2);
 }
 .header-container {
-  width: 95vw;
+  width: 97.5vw;
   height: 100%;
   display: flex;
   align-items: center;
   justify-items: center;
-  border: 1px solid red;
+}
+
+.header-logo {
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  padding: 1%;
 }
 
 /*** Clock CSS ****/
@@ -57,12 +70,32 @@ body {
 }
 
 .clock-container {
-  border: 1px solid red;
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
+.clock-group {
+  margin: 2%;
+}
+
+.clock-button {
+  width: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: rgba(192, 192, 192, 0.1);
+}
 .header-navigation {
+  margin-left: 5%;
+  width: 20vw;
+  display: flex;
+  justify-content: space-between;
+  align-content: space-between;
+}
+
+.header-navigation span {
+  font-weight: 800;
+  font-size: 1.2em;
 }
 
 /**** Text CSS ****/
@@ -73,22 +106,69 @@ body {
   text-transform: uppercase;
 }
 
+.is-module-title {
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 10px;
+}
+
+.is-regular {
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  padding: 10px;
+}
+
+.is-bold {
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  padding: 10px;
+}
 .is-time,
 .is-day {
+  font-family: "Poppins", sans-serif;
   font-size: 4em;
   color: #ddd;
   text-shadow: 0 1px 5px black;
 }
 
+.is-day {
+  margin-top: -2.5%;
+}
+
+.is-table-title {
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 1%;
+  width: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.is-table-week {
+  padding: 1%;
+}
+
 /*** Recent Body CSS ***/
 .recent-body {
-  padding: 1vw;
 }
 
 .recent-container {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   height: 100%;
-  border: 1px solid red;
+  padding: 1vw;
+}
+
+.recent-list {
+  display: flex;
+  flex-direction: column;
 }
 
 /**** Project List CSS ****/
@@ -98,4 +178,26 @@ body {
 .project-list-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-auto-rows: minmax(200px, auto);
+  grid-column-gap: 1%;
+  grid-row-gap: 5%;
+}
+
+.project-table {
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  box-shadow: 8px 8px 6px -6px rgba(0, 0, 0, 0.2);
+  padding: 2%;
+}
+
+.project-week-container {
+  display: flex;
+  flex-direction: column;
+  padding: 1%;
+}
+
+.project-week-container span:nth-child(odd) {
+  background-color: rgba(192, 192, 192, 0.5);
 }
