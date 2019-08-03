@@ -9,7 +9,54 @@ body {
   padding: 0;
 }
 
+/*** Dashboard CSS ***/
 .dashboard-container {
   width: 100vw;
   height: 100vh;
+  border: 1px solid red;
+  display: grid;
+  grid-template-rows: 1fr 10fr;
+}
+
+.child-container {
+  border: 1px solid black;
+}
+
+.body-child {
+  border: 1px solid blue;
+}
+
+.dashboard-body {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  grid-template-rows: 40% 60%;
+}
+
+.project-body {
+  display: grid;
+  grid-column: 1/3;
+}
+
+/**** Header CSS ****/
+.dashboard-header {
+  margin: 0 auto;
+}
+.header-container {
+  width: 95vw;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  border: 1px solid red;
+}
+
+.header-navigation {
+}
+
+/**** Text CSS ****/
+.is-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
