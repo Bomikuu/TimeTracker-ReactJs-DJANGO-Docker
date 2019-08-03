@@ -1,7 +1,5 @@
 # Time Tracker Django & React application
 
-This is a set up so that we can easily create apps that use Django on the backend (and take advantage of the amazing admin UI) and React (set up with [`create-react-app`](https://npm.im/create-react-app)) for the front end application.
-
 ## How to Run
 
 1. `docker-compose build`
