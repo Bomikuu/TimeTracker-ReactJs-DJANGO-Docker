@@ -23,7 +23,7 @@ class ProjectList(models.Model):
 
 
 class TimeStamp(models.Model):
+    employeeName = models.CharField(max_length=255)
     timeStamp = models.CharField(max_length=255)
     description = models.CharField(max_length=255)
-    employeeID = models.CharField(max_length=255)
     createdAt = models.DateTimeField("Created At", auto_now_add=True)
