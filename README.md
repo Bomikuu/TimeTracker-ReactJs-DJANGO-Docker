@@ -1,4 +1,6 @@
 # Time Tracker Django & React application
+## Clone the repo
+1. `git clone https://github.com/Bomikuu/TimeTracker`
 
 ## How to Run
 
