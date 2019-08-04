@@ -15,10 +15,10 @@ class ProjectSummary extends Component {
   }
 
   getListOfProjects = () => {
-    // const url = process.env.REACT_APP_API_BASE_URL + "/project";
-    // return axios.get(url).then(response => {
-    //   this.setState({ listOfProjects: response.data });
-    // });
+    const url = process.env.REACT_APP_API_BASE_URL + "/project";
+    return axios.get(url).then(response => {
+      this.setState({ listOfProjects: response.data });
+    });
   };
 
   handleOk = () => {
