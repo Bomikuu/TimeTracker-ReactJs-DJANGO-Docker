@@ -4,7 +4,7 @@ from rest_framework.generics import ListAPIView
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
-from .models import Person, TimeStamp
+from .models import Person, TimeStamp, Project
 from .serializers import *
 
 
@@ -26,3 +26,13 @@ class CreatePersonAPIView(CreateAPIView):
 class CreateTimestampAPIView(CreateAPIView):
     queryset = TimeStamp.objects.all()
     serializer_class = TimestampSerializer
+
+
+class CreateProjectAPIView(CreateAPIView):
+    queryset = Project.objects.all()
+    serializer_class = ProjectSerializer
+
+
+class ProjectListAPIView(ListAPIView):
+    queryset = Project.objects.all()
+    serializer_class = ProjectSerializer

@@ -2,7 +2,9 @@ from .api import (
     PersonListAPIView,
     CreatePersonAPIView,
     TimestampListAPIView,
-    CreateTimestampAPIView
+    CreateTimestampAPIView,
+    CreateProjectAPIView,
+    ProjectListAPIView
 )
 from django.urls import path
 import os
@@ -17,4 +19,8 @@ urlpatterns = [
          name='api-Timestamp-list'),
     path(r'api/v1/create-timestamp', CreateTimestampAPIView.as_view(),
          name='api-Timestamp-create'),
+    path(r'api/v1/create-project', CreateProjectAPIView.as_view(),
+         name='api-project-create'),
+    path(r'api/v1/project', ProjectListAPIView.as_view(),
+         name='api-project'),
 ]

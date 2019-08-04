@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Person, TimeStamp
+from .models import Person, TimeStamp, Project
 
 
 class PersonSerializer(serializers.ModelSerializer):
@@ -11,4 +11,10 @@ class PersonSerializer(serializers.ModelSerializer):
 class TimestampSerializer(serializers.ModelSerializer):
     class Meta:
         model = TimeStamp
+        fields = '__all__'
+
+
+class ProjectSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Project
         fields = '__all__'
