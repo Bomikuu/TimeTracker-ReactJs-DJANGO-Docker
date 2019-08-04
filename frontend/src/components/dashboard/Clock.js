@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Button, Icon } from "antd";
-import Timestamp from "../layout/Timestamp";
+import Timestamp from "../layout/AddTimestamp";
 import axios from "axios";
 
 class Clock extends Component {

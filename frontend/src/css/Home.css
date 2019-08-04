@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins");
 
 * {
-  font-family: "Roboto", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
@@ -14,7 +14,6 @@ body {
 .dashboard-container {
   width: 100vw;
   height: 100vh;
-
   display: grid;
   grid-template-rows: 1fr 10fr;
 }
@@ -23,7 +22,6 @@ body {
 }
 
 .body-child {
-  margin: 10px;
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
@@ -52,8 +50,8 @@ body {
 }
 
 .header-logo {
-  width: 30px;
-  height: 30px;
+  width: 50px;
+  height: 50px;
   margin-right: 5px;
 }
 
@@ -102,32 +100,42 @@ body {
 .is-title {
   font-size: 1.5rem;
   font-weight: 800;
-  letter-spacing: 1px;
+  letter-spacing: 10px;
   text-transform: uppercase;
+  margin-left: 5%;
 }
 
 .is-module-title {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 400;
   letter-spacing: 1px;
-  text-transform: uppercase;
   background-color: rgba(0, 0, 0, 0.05);
+  box-shadow: 8px 8px 6px -6px rgba(0, 0, 0, 0.2);
   padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .is-regular {
   font-size: 1rem;
   font-weight: 400;
   letter-spacing: 1px;
-  padding: 10px;
 }
 
-.is-bold {
+.is-timestamp {
+  display: flex;
+  justify-content: space-between;
   font-size: 1rem;
-  font-weight: 800;
+  font-weight: 400;
   letter-spacing: 1px;
-  padding: 10px;
+  padding: 1.5%;
 }
+
+.recent-list div:nth-child(even) {
+  background-color: rgba(192, 192, 192, 0.2);
+}
+
 .is-time,
 .is-day {
   font-family: "Poppins", sans-serif;
@@ -151,14 +159,16 @@ body {
 }
 
 .is-table-week {
-  padding: 1%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  padding: 1.5%;
 }
 
 /*** Recent Body CSS ***/
 .recent-body {
-}
-
-.recent-container {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -169,18 +179,29 @@ body {
 .recent-list {
   display: flex;
   flex-direction: column;
+  height: 100%;
+}
+
+.recent-empty {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
 }
 
 /**** Project List CSS ****/
 .project-body {
   padding: 1vw;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 1fr 10fr;
 }
 .project-list-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-auto-rows: minmax(200px, auto);
-  grid-column-gap: 1%;
-  grid-row-gap: 5%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.project-list-container div:nth-child(even) {
+  background-color: rgba(192, 192, 192, 0.5);
 }
 
 .project-table {
