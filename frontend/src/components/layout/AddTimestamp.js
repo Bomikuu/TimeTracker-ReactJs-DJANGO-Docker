@@ -6,20 +6,41 @@ class AddTimestamp extends Component {
     super(props);
   }
 
-  timestamp = {
+  state = {
     employeeName: "",
     timeStamp: "",
-    description: ""
+    description: "",
+    isFieldEmpty: false
   };
 
-  clearInputs = () => {
-    if (this.input1) {
-      console.log(this.input1);
+  initialState = {};
+
+  getData = () => {
+    let { employeeName, timeStamp, description } = this.state;
+    return {
+      employeeName: employeeName,
+      timeStamp: timeStamp,
+      description: description
+    };
+  };
+
+  checkIfEmpty = () => {
+    let { employeeName, timeStamp, description } = this.state;
+    if (employeeName === "" || timeStamp === "" || description === "") {
+      this.setState({ isFieldEmpty: true });
+    } else {
+      this.setState({
+        isFieldEmpty: false,
+        employeeName: "",
+        timeStamp: "",
+        description: ""
+      });
+      this.props.state.handleSubmit(this.getData());
     }
   };
 
   render() {
-    const { visible, handleOk, handleSubmit } = this.props.state;
+    const { visible, handleOk } = this.props.state;
 
     return (
       <Modal
@@ -33,8 +54,7 @@ class AddTimestamp extends Component {
             className="default"
             key="back"
             onClick={() => {
-              handleSubmit(this.timestamp);
-              this.clearInputs();
+              this.checkIfEmpty();
             }}
           >
             Submit
@@ -45,18 +65,29 @@ class AddTimestamp extends Component {
         <Input
           ref={c => (this.input1 = c)}
           className="input"
-          onChange={e => (this.timestamp.employeeName = e.target.value)}
+          value={this.state.employeeName}
+          onChange={e => this.setState({ employeeName: e.target.value })}
         />
         <div>Hours Rendered</div>
         <Input
           className="input"
-          onChange={e => (this.timestamp.timeStamp = e.target.value)}
+          value={this.state.timeStamp}
+          onChange={e => this.setState({ timeStamp: e.target.value })}
         />
         <div>Task Description</div>
         <Input
           className="input"
-          onChange={e => (this.timestamp.description = e.target.value)}
+          value={this.state.description}
+          onChange={e => this.setState({ description: e.target.value })}
         />
+        <span
+          className="validation"
+          style={
+            this.state.isFieldEmpty ? { color: "red" } : { display: "none" }
+          }
+        >
+          *All fields must be filled in
+        </span>
       </Modal>
     );
   }
