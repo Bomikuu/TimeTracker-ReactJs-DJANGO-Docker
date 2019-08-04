@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Modal, Button, Input } from "antd";
 
-class Timestamp extends Component {
+class AddTimestamp extends Component {
   constructor(props) {
     super(props);
   }
@@ -61,4 +61,4 @@ class Timestamp extends Component {
     );
   }
 }
-export default Timestamp;
+export default AddTimestamp;
