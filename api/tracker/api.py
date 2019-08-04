@@ -4,13 +4,13 @@ from rest_framework.generics import ListAPIView
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
-from .models import Person, TimeStamp, Project
+from .models import Employee, TimeStamp, Project
 from .serializers import *
 
 
-class PersonListAPIView(ListAPIView):
-    queryset = Person.objects.all()
-    serializer_class = PersonSerializer
+class EmployeeListAPIView(ListAPIView):
+    queryset = Employee.objects.all()
+    serializer_class = EmployeeSerializer
 
 
 class TimestampListAPIView(ListAPIView):
@@ -18,9 +18,9 @@ class TimestampListAPIView(ListAPIView):
     serializer_class = TimestampSerializer
 
 
-class CreatePersonAPIView(CreateAPIView):
-    queryset = Person.objects.all()
-    serializer_class = PersonSerializer
+class CreateEmployeeAPIView(CreateAPIView):
+    queryset = Employee.objects.all()
+    serializer_class = EmployeeSerializer
 
 
 class CreateTimestampAPIView(CreateAPIView):

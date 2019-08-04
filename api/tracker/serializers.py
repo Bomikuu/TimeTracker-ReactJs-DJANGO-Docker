@@ -1,10 +1,10 @@
 from rest_framework import serializers
-from .models import Person, TimeStamp, Project
+from .models import Employee, TimeStamp, Project
 
 
-class PersonSerializer(serializers.ModelSerializer):
+class EmployeeSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Person
+        model = Employee
         fields = '__all__'
 
 
