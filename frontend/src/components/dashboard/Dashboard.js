@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from "react";
 import "../../css/Dashboard.css";
+import "../../css/Home.css";
 import { Header } from "../layout/Layout";
 import Recent from "../dashboard/Recent";
 import ProjectSummary from "../dashboard/ProjectSummary";

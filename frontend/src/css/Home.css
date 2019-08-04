@@ -17,10 +17,6 @@ body {
   display: grid;
   grid-template-rows: 1fr 10fr;
 }
-
-.child-container {
-}
-
 .body-child {
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
